@@ -7,9 +7,19 @@ import java.util.List;
 
 public class AccountUpdate {
 
+    private String reason;
+
     private List<BalanceUpdate> balances;
 
     private List<PositionUpdate> positions;
+
+    public String getReason() {
+        return reason;
+    }
+
+    public void setReason(String reason) {
+        this.reason = reason;
+    }
 
     public List<BalanceUpdate> getBalances() {
         return balances;
