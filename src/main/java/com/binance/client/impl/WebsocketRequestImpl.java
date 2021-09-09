@@ -465,6 +465,7 @@ class WebsocketRequestImpl {
 
             if(jsonWrapper.getString("e").equals("ACCOUNT_UPDATE")) {
                 AccountUpdate accountUpdate = new AccountUpdate();
+                accountUpdate.setReason(jsonWrapper.getJsonObject("a").getString("m"));
 
                 List<BalanceUpdate> balanceList = new LinkedList<>();
                 JsonWrapperArray dataArray = jsonWrapper.getJsonObject("a").getJsonArray("B");
